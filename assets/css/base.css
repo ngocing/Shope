@@ -177,6 +177,7 @@ html {
     padding: 8px 16px;
     list-style: none;
     display: none;
+    z-index: 8;
 }
 
 .select-input__list::before {
@@ -199,4 +200,42 @@ html {
 
 .select-input__link:hover {
     color: var(--primary-color);
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+.pagination-item {
+    margin: 0 12px;
+}
+
+.pagination-item__link {
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    font-weight: 300;
+    min-width: 40px;
+    --height: 30px;
+    height: var(--height);
+    display: block;
+    text-align: center;
+    line-height: var(--height);
+    border-radius: 2px;
+}
+
+.pagination-item--active .pagination-item__link {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.pagination-item--active .pagination-item__link:hover {
+    background-color: #ed5c3f;
+}
+
+.pagination-item__icon {
+    font-size: 1.4rem;
 }
